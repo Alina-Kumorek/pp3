@@ -57,8 +57,13 @@ public class DrivingLicence {
 
 
     // setters
+
+    // 13.	Modify the setName() method in the DrivingLicense.
+    // Regardless of the given name value, the value of the attribute should begin with a capital letter.
+    // Replace the remaining letters with lowercase. Then check the method in action.
+    // Tip. Use the methods available in the String class.
     public void setName(String name) {
-        this.name = name;
+        this.name = name.substring(0, 1).toUpperCase() + name.substring(1).toLowerCase();
     }
 
     public void setSurname(String surname) {
@@ -85,8 +90,13 @@ public class DrivingLicence {
     // The valid value of the attribute should be greater than or equal to 1980
     // and less than or equal to the current year.
     // If the given value is different, do not change the attribute.
+    private static int minYear = 1980;
+    private static int thisYear = 2023;
+
     public void setYearOfIssue(int yearOfIssue) {
-        this.yearOfIssue = yearOfIssue;
+        if (yearOfIssue >= DrivingLicence.minYear && yearOfIssue <= DrivingLicence.thisYear) {
+            this.yearOfIssue = yearOfIssue;
+        }
     }
 
     public void setDrivingLicenceCategory(String drivingLicenceCategory) {
@@ -108,6 +118,7 @@ public class DrivingLicence {
         System.out.println("Driving License Number: " + getDrivingLicenceNumber());
         System.out.println("Year of Issue:\t" + getYearOfIssue());
         System.out.println("Driving License Category: " + getDrivingLicenceCategory());
+        System.out.println("------------");
     }
 
 // 11.	Add a toString() method in the DrivingLicense class to return driving license information.
