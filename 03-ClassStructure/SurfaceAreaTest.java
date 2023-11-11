@@ -12,5 +12,11 @@ public class SurfaceAreaTest {
         System.out.println(SurfaceArea.circle(3));
         System.out.print("Triangle area (3,4) is ");
         System.out.println(SurfaceArea.triangle(3,4));
+        System.out.print("Cuboid area (3,4,2) is ");
+        System.out.println(SurfaceArea.cuboid(3, 4, 2));
+        System.out.print("Sphere area (3) is ");
+        System.out.println(SurfaceArea.sphere(3));
+        System.out.print("Cone area (3,5) is ");
+        System.out.println(SurfaceArea.cone(3,5));
     }
 }
